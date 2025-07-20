@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MindSpace - Trends</title>
+  <link rel="stylesheet" href="site-plan.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="module" src="trends.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>MindSpace</h1>
+    <nav>
+      <a href="site-plan.html">Home</a>
+      <a href="trends.html">Trends</a>
+      <a href="#">Settings</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="filter-buttons">
+      <button id="filter7">Last 7 Days</button>
+      <button id="filter30">Last 30 Days</button>
+    </section>
+
+    <section class="graph">
+      <canvas id="trendChart" width="400" height="200"></canvas>
+    </section>
+
+    <section class="welcome">
+      <h2>Your Mood & Productivity Trends</h2>
+      <p>Review your past entries to discover patterns and insights.</p>
+      <img src="UploadedImage0.jpg" alt="Mood and productivity trends illustration" style="max-width:100%; border-radius:8px; margin-top:1em;">
+    </section>
+
+    <section class="log-form">
+      <h2>Past Entries</h2>
+      <div id="entriesContainer">
+        <p>Loading your entries...</p>
+      </div>
+    </section>
+
+    <section class="tip-box">
+      Tip of the Day: Stay consistent with your logging for better insights!
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MindSpace</p>
+  </footer>
+</body>
+</html>
