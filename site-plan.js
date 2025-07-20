@@ -2,22 +2,21 @@
 const form = document.getElementById('entryForm');
 const quoteDisplay = document.getElementById('quoteDisplay');
 
-const quotes = [
-  "Believe in yourself and all that you are.",
-  "The secret of getting ahead is getting started.",
-  "You are stronger than you think.",
-  "Progress, not perfection.",
-  "Every day is a new beginning."
+const quoteImages = [
+  `<img src="images/Quote1.png" alt="Believe in yourself and all that you are.">`,
+  `<img src="images/Quote2.png" alt="The secret of getting ahead is getting started.">`,
+  `<img src="images/Quote3.png" alt="You are stronger than you think.">`,
+  `<img src="images/Quote4.png" alt="Progress, not perfection.">`,
+  `<img src="images/Quote5.png" alt="Every day is a new beginning.">`
 ];
 
-function getRandomQuote() {
-  const index = Math.floor(Math.random() * quotes.length);
-  return quotes[index];
+function showRandomQuote() {
+  const quoteBox = document.getElementById("quote-box");
+  const randomIndex = Math.floor(Math.random() * quoteImages.length);
+  quoteBox.innerHTML = quoteImages[randomIndex];
 }
 
-function loadQuote() {
-  quoteDisplay.textContent = getRandomQuote();
-}
+window.onload = showRandomQuote;
 
 function saveEntry(entry) {
   let entries = JSON.parse(localStorage.getItem('mindspaceEntries')) || [];
